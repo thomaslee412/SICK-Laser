@@ -5,7 +5,7 @@
 int main()
 {
 //setup
-DT35 *DT35_class = new DT35(PB_4,PA_8,(0x82));;
+DT35 *DT35_class = new DT35(PA_8,PB_4,(0x82));;
 DT35_class->DT35_initialization(3);
 
 printf("INA3221:   FID:%d   UID:%d    Mode:%d\r\n",DT35_class->getManufacturerID(1),DT35_class->getDieID(1),DT35_class->getConfiguration(1));
