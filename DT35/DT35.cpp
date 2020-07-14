@@ -120,7 +120,7 @@
 
     int DT35::getBusVoltage(int INA3221_id, int channel_id)
     {
-        int temp = 0;
+        int16_t temp = 0;
         if(INA3221_id == 1)
         {
             temp = this->vSenor1->GetBusVoltage(channel_id) * 1000;

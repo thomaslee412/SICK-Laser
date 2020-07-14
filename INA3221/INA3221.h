@@ -1,15 +1,26 @@
-/*
-----------------------------------------------------------                                                                                                                                                  /* 
-I2Steve note:
-the design purpose ina3221 seems  to be measure the voltage output of POWER SUPPLY
-However, it is a cost-effective non-chip level solution for ADC(more than 5V)
-YET, due to the design of the chip only 1 channel can be use for one chip(if u plan to use it as ADC) 
+/* 
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+ 
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+ 
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
 */
  
 //=============================================================================
 // INA3221 Library
 // by Sven Lack
-// copy by on9 steve
 //=============================================================================
 
 
@@ -17,10 +28,7 @@ YET, due to the design of the chip only 1 channel can be use for one chip(if u p
 #define INA3221_H
 
 /**
-I2Steve onn99 EIE time:bus voltage vs shunt voltage
-The bus voltage is the total voltage between power and GND. It is the sum of the load voltage and the shunt voltage.
-The load voltage is the voltage going to the load.
-The shunt voltage is the voltage drop across the shunt resistor that is in series with the load.. That is how the sensor measures the current.
+ * Includes
  */
 #include "mbed.h"
 
@@ -136,9 +144,6 @@ The shunt voltage is the voltage drop across the shunt resistor that is in serie
     #define INA3221_REG_MANUFACTURER_ID             (0xFE)  // Manufacturer ID (R)
     #define INA3221_REG_DIE_ID                      (0xFF)  // Die ID (R)
 
-    #define VS             (0xFE)  // Manufacturer ID (R)
-    #define INA3221_REG_DIE_ID                      (0xFF)  // Die ID (R)
-
     #define SHUNT_RESISTOR_VALUE  (0.1)   // default shunt resistor value of 0.1 Ohm
 
 class INA3221{
@@ -218,4 +223,3 @@ class INA3221{
 };
 
 #endif /* INA3221_H */
-
